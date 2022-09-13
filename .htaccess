@@ -1,0 +1,20 @@
+# Error Page
+
+ErrorDocument 404 /pages/error-404
+
+
+
+
+RewriteEngine on
+
+# Does not apply to existing dirs (if the folder exists with the name name don't change)
+
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Check for files in dir with .html extension
+
+RewriteCond %{REQUEST_FILENAME}\.html -f
+
+# Show the page that has the .html extension
+
+RewriteRule ^(.*)$ $1.html [NC,L]
