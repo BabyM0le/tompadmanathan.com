@@ -1036,3 +1036,20 @@ a.side-projects-content-button:hover {
     padding-bottom: 1.2rem;
 }
 /* //ABOUT ME */
+
+/* Recipes */
+.recipes-column {
+    float: left;
+    width: 50%;
+}
+.recipes-row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    
+@media screen and (max-width: 600px) {
+    .recipes-column {
+        width: 100%;
+    }
+}
